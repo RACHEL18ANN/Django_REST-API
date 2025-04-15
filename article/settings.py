@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-(w3il(umqn*n0@8^eya2=p&c_e%6tff0vw4o=yqn0l+(^u4yc5
 DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS", "localhost,127.0.0.1,django-rest-api-with-access-tokens.onrender.com"
-).split(",")
+    "ALLOWED_HOSTS", "localhost,127.0.0.1"
+).split(",") + ["django-rest-api-with-access-tokens.onrender.com"]
 
 
 # Application definition
