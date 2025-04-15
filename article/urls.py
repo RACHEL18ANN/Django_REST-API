@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken.views import obtain_auth_token
+from .views import SecureHelloView
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('api-token-auth/', obtain_auth_token),
+    path('secure-hello/', SecureHelloView.as_view()),
 ]
